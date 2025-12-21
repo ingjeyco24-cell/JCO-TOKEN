@@ -1,323 +1,159 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<title>JCO Token | Comunidad & Propósito</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>JCO Token | Comunidad Social en BNB Smart Chain</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-:root{
-  --bg-main:#050814;
-  --bg-section:#0b1020;
-  --primary:#19e6c5;
-  --primary-soft:#7ff5e4;
-  --text-main:#ffffff;
-  --text-soft:#cbd5e1;
-}
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(180deg, #0b1220, #0f1b33);
+            color: #ffffff;
+            text-align: center;
+        }
 
-*{box-sizing:border-box}
+        header {
+            padding: 40px 20px;
+        }
 
-body{
-  margin:0;
-  font-family:Arial,Helvetica,sans-serif;
-  background:linear-gradient(180deg,var(--bg-main),#0a0f2a);
-  color:var(--text-main);
-}
+        header img {
+            width: 180px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
 
-/* GLOBAL */
-section{
-  padding:90px 20px;
-}
-.container{
-  max-width:1100px;
-  margin:auto;
-}
-h1,h2{
-  margin-bottom:20px;
-}
-p{
-  color:var(--text-soft);
-  line-height:1.6;
-}
+        h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
 
-/* BUTTONS */
-.btn{
-  display:inline-block;
-  margin:10px;
-  padding:14px 26px;
-  background:var(--primary);
-  color:#000;
-  font-weight:bold;
-  text-decoration:none;
-  border-radius:12px;
-  transition:.3s;
-}
-.btn:hover{
-  background:var(--primary-soft);
-}
-.btn-outline{
-  background:transparent;
-  border:2px solid var(--primary);
-  color:var(--primary);
-}
-.btn-outline:hover{
-  background:var(--primary);
-  color:#000;
-}
+        p.subtitle {
+            font-size: 18px;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            color: #cfd8ff;
+        }
 
-/* HERO */
-.hero{
-  text-align:center;
-  padding:120px 20px;
-}
-.hero img{
-  width:160px;
-  margin-bottom:25px;
-}
-.hero h1{
-  font-size:46px;
-}
-.hero p{
-  max-width:750px;
-  margin:auto;
-  font-size:18px;
-}
+        .btn {
+            display: inline-block;
+            margin: 10px;
+            padding: 14px 26px;
+            background: #f5c542;
+            color: #000;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+        }
 
-/* CARDS */
-.cards{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:25px;
-}
-.card{
-  background:var(--bg-section);
-  padding:30px;
-  border-radius:18px;
-  border:1px solid rgba(255,255,255,.05);
-}
-.card h3{
-  color:var(--primary);
-  margin-bottom:10px;
-}
+        .btn:hover {
+            background: #ffd966;
+        }
 
-/* ROADMAP */
-.roadmap li{
-  margin:12px 0;
-}
+        section {
+            max-width: 900px;
+            margin: 40px auto;
+            background: rgba(255,255,255,0.05);
+            padding: 30px;
+            border-radius: 12px;
+        }
 
-/* PRICE */
-.price-box{
-  background:linear-gradient(135deg,#0b1020,#11183f);
-  padding:40px;
-  border-radius:20px;
-  text-align:center;
-}
-#price{
-  font-size:24px;
-  margin-top:10px;
-  color:var(--primary);
-}
+        h2 {
+            margin-bottom: 20px;
+            color: #f5c542;
+        }
 
-/* COMMUNITY */
-.socials{
-  display:flex;
-  justify-content:center;
-  flex-wrap:wrap;
-  gap:20px;
-}
-.socials a{
-  display:flex;
-  align-items:center;
-  gap:10px;
-  padding:14px 18px;
-  background:var(--bg-section);
-  border-radius:14px;
-  text-decoration:none;
-  color:white;
-  transition:.3s;
-}
-.socials a:hover{
-  transform:scale(1.05);
-}
-.socials img{
-  width:22px;
-  filter:invert(1);
-}
+        ul {
+            list-style: none;
+            padding: 0;
+            font-size: 18px;
+        }
 
-/* AIRDROP */
-.airdrop{
-  background:linear-gradient(135deg,var(--primary),#14b8a6);
-  color:#000;
-  text-align:center;
-}
-.airdrop p{
-  color:#000;
-}
+        ul li {
+            margin: 10px 0;
+        }
 
-/* FOOTER */
-footer{
-  text-align:center;
-  padding:30px;
-  font-size:14px;
-  color:#9ca3af;
-}
-.contract{
-  word-break:break-all;
-  margin-top:10px;
-  font-size:13px;
-}
-</style>
+        .contract {
+            word-break: break-all;
+            background: #0b1220;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 10px;
+            font-size: 15px;
+        }
+
+        footer {
+            margin: 40px 0 20px;
+            font-size: 14px;
+            color: #aaa;
+        }
+    </style>
 </head>
 
 <body>
 
-<!-- HERO -->
-<section class="hero">
-  <img src="logo.png" alt="JCO Token Logo">
-  <h1>JCO TOKEN</h1>
-  <p>
-    Token comunitario en BNB Smart Chain enfocado en impacto social,
-    transparencia y crecimiento orgánico impulsado por la comunidad.
-  </p>
+<header>
+    <img src="WhatsApp Image 2025-12-20 at 17.52.17.jpeg" alt="JCO Token Logo">
 
-  <a class="btn" href="https://pancakeswap.finance/swap?outputCurrency=0x2b2c656C8D4B2F50f75F084dDeEC311Ce19c94F8" target="_blank">
-    Comprar en PancakeSwap
-  </a>
+    <h1>JCO TOKEN</h1>
 
-  <a class="btn btn-outline" href="airdrop.html">Airdrop</a>
-  <button class="btn btn-outline" onclick="addToMetaMask()">Agregar a MetaMask</button>
-</section>
+    <p class="subtitle">
+        Token comunitario en BNB Smart Chain enfocado en impacto social,
+        crecimiento orgánico, transparencia y adopción real.
+    </p>
 
-<!-- QUE ES -->
+    <a class="btn" href="https://t.me/JCOoficial" target="_blank">Telegram</a>
+    <a class="btn" href="https://pancakeswap.finance" target="_blank">Comprar en PancakeSwap</a>
+</header>
+
 <section>
-  <div class="container">
     <h2>¿Qué es JCO?</h2>
     <p>
-      JCO Token es un proyecto comunitario creado para fortalecer comunidades,
-      apoyar iniciativas sociales y promover la adopción real de blockchain
-      de forma accesible y transparente.
+        JCO Token nace como un proyecto comunitario con enfoque social.
+        Nuestro objetivo es construir una comunidad fuerte donde el token
+        tenga utilidad real y respaldo en acciones concretas.
     </p>
-  </div>
+    <p>
+        El crecimiento del proyecto se basa en la participación de la comunidad,
+        transparencia del contrato y decisiones abiertas.
+    </p>
 </section>
 
-<!-- TOKENOMICS -->
 <section>
-  <div class="container">
-    <h2>Tokenomics</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>Supply Total</h3>
-        <p>999,030,000 JCO</p>
-      </div>
-      <div class="card">
-        <h3>Red</h3>
-        <p>BNB Smart Chain (BEP-20)</p>
-      </div>
-      <div class="card">
-        <h3>Liquidez</h3>
-        <p>Activa en PancakeSwap</p>
-      </div>
-      <div class="card">
-        <h3>Contrato</h3>
-        <p>Verificado en BscScan</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ROADMAP -->
-<section>
-  <div class="container">
-    <h2>Roadmap</h2>
-    <ul class="roadmap">
-      <li>✅ Lanzamiento del token</li>
-      <li>✅ Liquidez inicial</li>
-      <li>✅ Web oficial</li>
-      <li>✅ Airdrop comunidad</li>
-      <li>🚀 Dominio jcotoken.io</li>
-      <li>🚀 Expansión y utilidades</li>
+    <h2>Información del Token</h2>
+    <ul>
+        <li>🔹 Red: BNB Smart Chain</li>
+        <li>🔹 Estándar: BEP-20</li>
+        <li>🔹 Liquidez: Activa</li>
+        <li>🔹 Contrato: Verificado</li>
     </ul>
-  </div>
-</section>
 
-<!-- PRECIO -->
-<section>
-  <div class="container price-box">
-    <h2>Precio en tiempo real</h2>
-    <div id="price">Cargando precio...</div>
-  </div>
-</section>
-
-<!-- COMUNIDAD -->
-<section>
-  <div class="container">
-    <h2>Comunidad Oficial</h2>
-    <div class="socials">
-      <a href="https://t.me/JCOoficial" target="_blank">
-        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/telegram.svg"> Telegram
-      </a>
-      <a href="https://www.reddit.com/r/JCOTOKEN" target="_blank">
-        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/reddit.svg"> Reddit
-      </a>
-      <a href="mailto:jcotoken@gmail.com">
-        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/gmail.svg"> Correo
-      </a>
+    <p><strong>Dirección del contrato:</strong></p>
+    <div class="contract">
+        0x2b2c656C8D4B2F50f75F084dDeEC311Ce19c94F8
     </div>
-  </div>
+
+    <br>
+    <a class="btn" href="https://bscscan.com/token/0x2b2c656C8D4B2F50f75F084dDeEC311Ce19c94F8" target="_blank">
+        Ver en BscScan
+    </a>
 </section>
 
-<!-- AIRDROP -->
-<section class="airdrop">
-  <h2>🎁 Airdrop JCO</h2>
-  <p>Recompensa para los primeros miembros de la comunidad.</p>
-  <a class="btn" href="airdrop.html">Participar</a>
+<section>
+    <h2>Comunidad</h2>
+    <p>
+        Únete a nuestra comunidad oficial para participar en airdrops,
+        anuncios, votaciones y el crecimiento del proyecto.
+    </p>
+
+    <a class="btn" href="https://t.me/JCOoficial" target="_blank">Telegram Oficial</a>
+    <a class="btn" href="https://www.reddit.com/r/JCOTOKEN" target="_blank">Reddit</a>
 </section>
 
-<!-- FOOTER -->
 <footer>
-  © 2025 JCO Token — Proyecto comunitario<br>
-  <div class="contract">
-    Contrato: 0x2b2c656C8D4B2F50f75F084dDeEC311Ce19c94F8
-  </div>
+    © 2025 JCO Token — Todos los derechos reservados
 </footer>
-
-<script>
-async function getPrice(){
-  try{
-    const res=await fetch("https://api.dexscreener.com/latest/dex/tokens/0x2b2c656C8D4B2F50f75F084dDeEC311Ce19c94F8");
-    const data=await res.json();
-    if(data.pairs && data.pairs.length>0){
-      document.getElementById("price").innerHTML=
-        "1 JCO = $"+Number(data.pairs[0].priceUsd).toFixed(8)+" USD";
-    }else{
-      document.getElementById("price").innerHTML="Precio no disponible";
-    }
-  }catch{
-    document.getElementById("price").innerHTML="Error cargando precio";
-  }
-}
-getPrice();
-setInterval(getPrice,15000);
-
-async function addToMetaMask(){
-  if(window.ethereum){
-    await ethereum.request({
-      method:'wallet_watchAsset',
-      params:{
-        type:'ERC20',
-        options:{
-          address:'0x2b2c656C8D4B2F50f75F084dDeEC311Ce19c94F8',
-          symbol:'JCO',
-          decimals:18,
-          image:window.location.origin+'/logo.png'
-        }
-      }
-    });
-  }else{
-    alert("MetaMask no está instalado");
-  }
-}
-</script>
 
 </body>
 </html>
