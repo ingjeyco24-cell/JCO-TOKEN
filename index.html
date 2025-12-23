@@ -15,18 +15,18 @@ body {
 }
 
 header {
-  padding: 40px 20px;
+  padding: 60px 20px;
 }
 
 header img {
-  width: 150px;
+  width: 140px;
   border-radius: 50%;
   margin-bottom: 20px;
-  box-shadow: 0 0 20px rgba(255,255,255,0.3);
+  box-shadow: 0 0 25px rgba(255,255,255,0.25);
 }
 
 h1 {
-  font-size: 34px;
+  font-size: 38px;
   margin-bottom: 10px;
 }
 
@@ -34,7 +34,8 @@ p {
   font-size: 16px;
   color: #d1d5ff;
   max-width: 900px;
-  margin: auto;
+  margin: 12px auto;
+  line-height: 1.6;
 }
 
 section {
@@ -47,7 +48,6 @@ section {
 
 h2 {
   margin-bottom: 15px;
-  color: #ffffff;
 }
 
 ul {
@@ -63,7 +63,7 @@ li {
 .btn {
   display: inline-block;
   margin: 10px;
-  padding: 14px 24px;
+  padding: 14px 26px;
   background: #2563eb;
   color: white;
   text-decoration: none;
@@ -73,16 +73,23 @@ li {
   transition: 0.3s;
 }
 
-.btn:hover {
-  background: #3b82f6;
-}
+.btn.green { background:#16a34a; }
+.btn.gray { background:#475569; }
+
+.btn:hover { opacity: 0.9; }
 
 .contract {
   word-break: break-all;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0,0,0,0.45);
   padding: 14px;
   border-radius: 10px;
   font-size: 14px;
+  margin-top: 12px;
+}
+
+.notice {
+  font-size: 14px;
+  color: #facc15;
   margin-top: 10px;
 }
 
@@ -101,110 +108,108 @@ footer {
 
   <h1>JCO TOKEN</h1>
   <p>
-    Token comunitario en BNB Smart Chain enfocado en crecimiento,
-    transparencia, apoyo social y adopción real impulsada por la comunidad.
+    Community-driven token on BNB Smart Chain focused on transparency,
+    organic growth and social impact.
   </p>
-  <a class="btn" href="https://t.me/JCOoficial" target="_blank">Telegram</a>
-  <a class="btn" href="airdrop.html">Airdrop
-    JCO</a>
 
-  <a class="btn"
+  <a class="btn green"
      href="https://pancakeswap.finance/swap?outputCurrency=0x2b2c656C8D4B2F50f75F084dDeEC311Ce19c94F8"
      target="_blank">
-     Comprar en PancakeSwap
+     Buy on PancakeSwap
   </a>
 
-  <button class="btn" onclick="addToMetaMask()">Agregar a MetaMask</button>
+  <a class="btn"
+     href="airdrop.html">
+     Airdrop
+  </a>
+
+  <a class="btn gray"
+     href="https://t.me/JCOoficial"
+     target="_blank">
+     Telegram
+  </a>
+
+  <button class="btn" onclick="addToMetaMask()">Add to MetaMask</button>
+
+  <div class="notice">
+    ⚠️ JCO is not an investment product and does not guarantee profits.
+  </div>
 </header>
 
 <section>
-<h2>¿Qué es JCO Token?</h2>
+<h2>What is JCO?</h2>
 <p>
-JCO Token nace como un proyecto comunitario con enfoque social,
-creado para fortalecer comunidades, apoyar iniciativas reales
-y promover la adopción de la tecnología blockchain de forma simple y accesible.
-</p>
-<br>
-<p>
-El proyecto se basa en la transparencia, crecimiento orgánico
-y participación activa de su comunidad.
+JCO is a community-based BEP-20 token created to support real initiatives,
+reward active members and promote blockchain adoption in a transparent way.
 </p>
 </section>
 
 <section>
-<h2>Misión & Visión</h2>
+<h2>Mission & Vision</h2>
 <ul>
-  <li>🤝 Construir una comunidad sólida y participativa.</li>
-  <li>🌱 Impulsar el crecimiento orgánico del token.</li>
-  <li>📢 Promover el uso real del token dentro y fuera del ecosistema.</li>
-  <li>❤️ Apoyar iniciativas sociales y comunitarias.</li>
+  <li>🤝 Build a strong and transparent community</li>
+  <li>🌱 Organic and sustainable growth</li>
+  <li>📢 Real utility driven by community participation</li>
+  <li>❤️ Support social and community initiatives</li>
 </ul>
 </section>
 
 <section>
-<h2>Utilidad del Token</h2>
+<h2>Token Utility</h2>
 <ul>
-  <li>🎁 Airdrops y recompensas comunitarias.</li>
-  <li>🗳️ Participación en votaciones del proyecto.</li>
-  <li>🎯 Beneficios exclusivos para holders.</li>
-  <li>🔄 Intercambio libre en PancakeSwap.</li>
-  <li>🚀 Futuras integraciones y alianzas.</li>
+  <li>🎁 Community airdrops and rewards</li>
+  <li>🗳️ Participation in future votes</li>
+  <li>🎯 Benefits for long-term holders</li>
+  <li>🔄 Free trading on PancakeSwap</li>
+  <li>🚀 Future integrations</li>
 </ul>
 </section>
 
 <section>
 <h2>Tokenomics</h2>
 <ul>
-  <li>🔹 Red: BNB Smart Chain</li>
-  <li>🔹 Tipo: BEP-20</li>
-  <li>🔹 Supply total: 999,030,000 JCO</li>
-  <li>🔹 Liquidez: Activa</li>
-  <li>🔹 Contrato: Verificado</li>
+  <li>🔹 Network: BNB Smart Chain</li>
+  <li>🔹 Standard: BEP-20</li>
+  <li>🔹 Total Supply: 999,030,000 JCO</li>
+  <li>🔹 Liquidity: Active (PancakeSwap V2)</li>
+  <li>🔹 Contract: Verified</li>
 </ul>
 
 <div class="contract">
-<strong>Contrato oficial:</strong><br>
+<strong>Official Contract:</strong><br>
 0x2b2c656C8D4B2F50f75F084dDeEC311Ce19c94F8
 </div>
 
 <a class="btn"
    href="https://bscscan.com/token/0x2b2c656C8D4B2F50f75F084dDeEC311Ce19c94F8"
    target="_blank">
-   Ver en BscScan
+   View on BscScan
 </a>
 </section>
 
 <section>
-<h2>Roadmap</h2>
-<ul>
-  <li>✅ Lanzamiento del token</li>
-  <li>✅ Liquidez inicial</li>
-  <li>✅ Web oficial</li>
-  <li>🔜 Airdrops comunitarios</li>
-  <li>🔜 Expansión de comunidad</li>
-  <li>🔜 Nuevas integraciones</li>
-</ul>
+<h2>Live Price</h2>
+<p id="price">Loading price...</p>
+<p class="notice">
+Price is indicative and depends on liquidity and market conditions.
+</p>
 </section>
 
 <section>
-<h2>Precio en tiempo real</h2>
-<p id="price">Cargando precio...</p>
-</section>
-
-<section>
-<h2>Comunidad</h2>
+<h2>Community</h2>
 <p>
-Únete a nuestro grupo oficial para airdrops, noticias,
-votaciones y anuncios importantes del proyecto.
+Join our official Telegram group for updates, airdrops and announcements.
 </p>
 
-<a class="btn" href="https://t.me/JCOoficial" target="_blank">
-Unirse a Telegram
+<a class="btn"
+   href="https://t.me/JCOoficial"
+   target="_blank">
+Join Telegram
 </a>
 </section>
 
 <footer>
-© 2025 JCO Token — Todos los derechos reservados
+© 2025 JCO Token — Official Website
 </footer>
 
 <script>
@@ -217,14 +222,14 @@ async function getPrice() {
 
     if (data.pairs && data.pairs.length > 0) {
       document.getElementById("price").innerHTML =
-        "💰 1 JCO = $" + Number(data.pairs[0].priceUsd).toFixed(8) + " USD";
+        "💰 1 JCO ≈ $" + Number(data.pairs[0].priceUsd).toFixed(8) + " USD";
     } else {
       document.getElementById("price").innerHTML =
-        "Precio aún no disponible";
+        "Price not available yet";
     }
   } catch {
     document.getElementById("price").innerHTML =
-      "Error cargando precio";
+      "Error loading price";
   }
 }
 
@@ -246,11 +251,11 @@ async function addToMetaMask() {
           }
         }
       });
-    } catch (error) {
-      alert("Error al agregar el token");
+    } catch {
+      alert("Error adding token");
     }
   } else {
-    alert("MetaMask no está instalado");
+    alert("MetaMask is not installed");
   }
 }
 </script>
