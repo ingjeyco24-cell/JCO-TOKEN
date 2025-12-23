@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 <meta charset="UTF-8">
 <title>JCOTOKEN</title>
@@ -33,12 +33,13 @@ body{
 .brand{
   font-size:26px;
   font-weight:bold;
+  letter-spacing:1px;
 }
 
 .actions{
   display:flex;
   align-items:center;
-  gap:18px;
+  gap:20px;
 }
 
 .lang{
@@ -54,13 +55,12 @@ body{
   cursor:pointer;
 }
 
-/* MENU */
 .menu{
   position:fixed;
   top:70px;
   right:0;
   background:#0b1020;
-  width:260px;
+  width:240px;
   display:none;
   flex-direction:column;
   box-shadow:-5px 0 20px rgba(0,0,0,0.6);
@@ -86,6 +86,7 @@ header img{
   width:140px;
   border-radius:50%;
   margin-bottom:20px;
+  box-shadow:0 0 20px rgba(255,255,255,0.3);
 }
 
 section{
@@ -100,6 +101,9 @@ h1{font-size:34px;}
 h2{margin-bottom:15px;}
 p{color:#d1d5ff;max-width:900px;margin:auto;}
 
+ul{text-align:left;max-width:800px;margin:auto;}
+li{margin:10px 0;}
+
 .btn{
   display:inline-block;
   margin:10px;
@@ -113,6 +117,15 @@ p{color:#d1d5ff;max-width:900px;margin:auto;}
 
 .btn:hover{background:#3b82f6;}
 
+.contract{
+  word-break:break-all;
+  background:rgba(0,0,0,0.5);
+  padding:14px;
+  border-radius:10px;
+  font-size:14px;
+  margin-top:10px;
+}
+
 footer{
   margin:40px 0 20px;
   font-size:13px;
@@ -123,7 +136,7 @@ footer{
 
 <body>
 
-<!-- TOP BAR -->
+<!-- HEADER -->
 <div class="topbar">
   <div class="brand">JCOTOKEN</div>
   <div class="actions">
@@ -132,77 +145,134 @@ footer{
   </div>
 </div>
 
-<!-- MENU -->
 <div class="menu" id="menu">
-  <a href="https://pancakeswap.finance/swap?outputCurrency=0x2b2c656C8D4B2F50f75F084dDeEC311Ce19c94F8" target="_blank"
-     data-en="Buy Token" data-es="Comprar Token"></a>
-
-  <a href="https://bscscan.com/token/0x2b2c656C8D4B2F50f75F084dDeEC311Ce19c94F8" target="_blank"
-     data-en="Verify Contract" data-es="Verificar Contrato"></a>
-
-  <a href="https://t.me/JCOoficial" target="_blank"
-     data-en="Telegram" data-es="Telegram"></a>
-
-  <a href="https://x.com/jcotoken" target="_blank"
-     data-en="X (Twitter)" data-es="X (Twitter)"></a>
-
-  <a href="https://reddit.com/r/JCOTOKEN" target="_blank"
-     data-en="Reddit" data-es="Reddit"></a>
+  <a href="#buy">Buy Token</a>
+  <a href="airdrop.html">Airdrop</a>
+  <a href="#roadmap">Roadmap</a>
+  <a href="#community">Community</a>
+  <a href="https://bscscan.com/token/0x2b2c656C8D4B2F50f75F084dDeEC311Ce19c94F8" target="_blank">Contract</a>
+  <a href="https://t.me/JCOoficial" target="_blank">Telegram</a>
 </div>
 
 <header>
   <img src="logo.png" alt="JCOTOKEN">
   <h1>JCOTOKEN</h1>
+  <p id="subtitle">Community-driven token on BNB Smart Chain</p>
 
-  <p data-en="Community-driven token on BNB Smart Chain"
-     data-es="Token comunitario en BNB Smart Chain"></p>
-
-  <a class="btn"
+  <a class="btn" id="buy"
      href="https://pancakeswap.finance/swap?outputCurrency=0x2b2c656C8D4B2F50f75F084dDeEC311Ce19c94F8"
-     target="_blank"
-     data-en="Buy on PancakeSwap"
-     data-es="Comprar en PancakeSwap"></a>
+     target="_blank">Buy on PancakeSwap</a>
+
+  <a class="btn" href="airdrop.html">Airdrop</a>
+  <button class="btn" onclick="addToMetaMask()">Add to MetaMask</button>
 </header>
 
 <section>
-  <h2 data-en="About JCOTOKEN" data-es="Sobre JCOTOKEN"></h2>
-  <p data-en="JCOTOKEN is a community-focused project designed to grow organically and support social initiatives."
-     data-es="JCOTOKEN es un proyecto comunitario diseñado para crecer de forma orgánica y apoyar iniciativas sociales."></p>
+<h2>About JCOTOKEN</h2>
+<p id="about">
+JCOTOKEN is a community-focused project designed to grow organically,
+support social initiatives and promote real blockchain adoption.
+</p>
+</section>
+
+<section id="roadmap">
+<h2>Roadmap</h2>
+<ul>
+  <li>✅ Token Launch</li>
+  <li>✅ Initial Liquidity</li>
+  <li>✅ Official Website</li>
+  <li>🔜 Community Airdrops</li>
+  <li>🔜 Expansion & Partnerships</li>
+</ul>
 </section>
 
 <section>
-  <h2 data-en="Community" data-es="Comunidad"></h2>
-  <p data-en="Join our official channels"
-     data-es="Únete a nuestros canales oficiales"></p>
+<h2>Token Info</h2>
+<ul>
+  <li>Network: BNB Smart Chain</li>
+  <li>Standard: BEP-20</li>
+  <li>Total Supply: 999,030,000 JCO</li>
+  <li>Liquidity: Active</li>
+</ul>
 
-  <a class="btn" href="https://t.me/JCOoficial" target="_blank">Telegram</a>
-  <a class="btn" href="https://x.com/jcotoken" target="_blank">X</a>
-  <a class="btn" href="https://reddit.com/r/JCOTOKEN" target="_blank">Reddit</a>
+<div class="contract">
+<strong>Contract:</strong><br>
+0x2b2c656C8D4B2F50f75F084dDeEC311Ce19c94F8
+</div>
+
+<a class="btn"
+   href="https://bscscan.com/token/0x2b2c656C8D4B2F50f75F084dDeEC311Ce19c94F8"
+   target="_blank">View on BscScan</a>
 </section>
 
-<footer data-en="© 2025 JCOTOKEN — Community Project"
-        data-es="© 2025 JCOTOKEN — Proyecto Comunitario"></footer>
+<section>
+<h2>Live Price</h2>
+<p id="price">Loading price...</p>
+</section>
+
+<section id="community">
+<h2>Community</h2>
+<p>Join our official channels</p>
+<a class="btn" href="https://t.me/JCOoficial" target="_blank">Telegram</a>
+<a class="btn" href="https://x.com/jcotoken" target="_blank">X (Twitter)</a>
+<a class="btn" href="https://reddit.com/r/JCOTOKEN" target="_blank">Reddit</a>
+</section>
+
+<footer>
+© 2025 JCOTOKEN — Community Project
+</footer>
 
 <script>
-let currentLang="EN";
-
 function toggleMenu(){
   const menu=document.getElementById("menu");
   menu.style.display = menu.style.display==="flex"?"none":"flex";
 }
 
+let lang="EN";
 function toggleLang(){
-  currentLang = currentLang==="EN"?"ES":"EN";
-  document.getElementById("langLabel").innerText=currentLang;
+  lang = lang==="EN"?"ES":"EN";
+  document.getElementById("langLabel").innerText=lang;
 
-  document.querySelectorAll("[data-en]").forEach(el=>{
-    el.innerText = currentLang==="EN" ? el.dataset.en : el.dataset.es;
-  });
+  document.getElementById("subtitle").innerText =
+    lang==="EN"
+    ? "Community-driven token on BNB Smart Chain"
+    : "Token comunitario en BNB Smart Chain";
+
+  document.getElementById("about").innerText =
+    lang==="EN"
+    ? "JCOTOKEN is a community-focused project designed to grow organically, support social initiatives and promote real blockchain adoption."
+    : "JCOTOKEN es un proyecto comunitario diseñado para crecer de forma orgánica, apoyar iniciativas sociales y promover la adopción real de blockchain.";
 }
 
-// Init language
-toggleLang();
-toggleLang();
+async function getPrice(){
+  try{
+    const r=await fetch("https://api.dexscreener.com/latest/dex/tokens/0x2b2c656C8D4B2F50f75F084dDeEC311Ce19c94F8");
+    const d=await r.json();
+    if(d.pairs && d.pairs.length>0){
+      document.getElementById("price").innerText =
+        "1 JCO = $" + Number(d.pairs[0].priceUsd).toFixed(8) + " USD";
+    }
+  }catch{}
+}
+getPrice();
+setInterval(getPrice,15000);
+
+async function addToMetaMask(){
+  if(window.ethereum){
+    await ethereum.request({
+      method:'wallet_watchAsset',
+      params:{
+        type:'ERC20',
+        options:{
+          address:'0x2b2c656C8D4B2F50f75F084dDeEC311Ce19c94F8',
+          symbol:'JCO',
+          decimals:18,
+          image:window.location.origin+'/logo.png'
+        }
+      }
+    });
+  }
+}
 </script>
 
 </body>
