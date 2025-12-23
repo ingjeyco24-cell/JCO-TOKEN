@@ -17,7 +17,21 @@ body{
     linear-gradient(rgba(5,8,20,0.85), rgba(5,8,20,0.85)),
     url("background.jpeg") center/cover no-repeat fixed;
 }
+  
+/* TITULO CON LOGO PEQUEÑO */
+.token-title{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-size: 42px;
+  font-weight: bold;
+}
 
+.token-logo{
+  width: 36px;
+  height: 36px;
+}
 /* TOP BAR */
 .topbar{
   position:fixed;
@@ -166,7 +180,10 @@ footer{
 
 <header>
   <img src="logo.png" alt="JCOTOKEN">
-  <h1>JCOTOKEN</h1>
+  <h1 class="token-title">
+  <img src="logo-top.png" alt="JCO Logo" class="token-logo">
+  JCOTOKEN
+</h1>
 
   <p id="subtitle"
      data-en="Community-driven token on BNB Smart Chain"
