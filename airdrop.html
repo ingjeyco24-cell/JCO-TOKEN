@@ -2,10 +2,11 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>JCO Airdrop</title>
+<title>JCOTOKEN Airdrop</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
+/* ===== BODY ===== */
 body{
   margin:0;
   font-family:Arial, Helvetica, sans-serif;
@@ -16,14 +17,68 @@ body{
   background:
     linear-gradient(rgba(5,8,20,0.85), rgba(5,8,20,0.85)),
     url("background.jpeg") center/cover no-repeat fixed;
-header{
-  padding:50px 20px;
-  
 }
+
+/* ===== TOP BAR ===== */
+.topbar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background: #050814;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 25px;
+  z-index: 9999;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  font-weight:bold;
+}
+
+.brand-logo{
+  width:50px;
+  height:50px;
+}
+
+.brand-text{
+  font-size:22px;
+  letter-spacing:1px;
+}
+
+.lang{
+  cursor:pointer;
+  background:#111;
+  padding:8px 14px;
+  border-radius:20px;
+  font-weight:bold;
+}
+
+/* ===== HEADER ===== */
+header{
+  padding:40px 20px;
+  max-width:900px;
+  margin:40px auto;
+}
+
+.main-logo{
+  width:180px;
+  max-width:70%;
+  margin-bottom:20px;
+}
+
 h1{
   font-size:36px;
   margin-bottom:10px;
 }
+
+/* ===== SECTIONS ===== */
 section{
   background:rgba(255,255,255,0.06);
   margin:30px auto;
@@ -31,14 +86,18 @@ section{
   border-radius:14px;
   max-width:900px;
 }
+
 ul{
   text-align:left;
   max-width:650px;
   margin:auto;
 }
+
 li{
   margin:12px 0;
 }
+
+/* ===== BUTTONS ===== */
 .btn{
   display:inline-block;
   margin:10px;
@@ -50,13 +109,17 @@ li{
   font-weight:bold;
   transition:0.3s;
 }
+
 .btn:hover{
   background:#3b82f6;
 }
+
 .small{
   font-size:14px;
   color:#ccc;
 }
+
+/* ===== FOOTER ===== */
 footer{
   margin:40px 0 20px;
   font-size:13px;
@@ -67,29 +130,46 @@ footer{
 
 <body>
 
+<!-- ===== TOP BAR ===== -->
+<div class="topbar">
+  <div class="brand">
+    <img src="logo-top.png" class="brand-logo" alt="JCO">
+    <span class="brand-text">JCOTOKEN</span>
+  </div>
+
+  <div class="lang" onclick="toggleLang()">
+    🌐 <span id="langLabel">ES</span>
+  </div>
+</div>
+
+<!-- ===== HEADER ===== -->
 <header>
-<h1>🎁 JCOTOKEN AIRDROP</h1>
-<p>Recompensa para los primeros miembros de la comunidad</p>
+  <img src="logo.png" class="main-logo" alt="JCOTOKEN">
+  <h1 data-es="🎁 JCOTOKEN AIRDROP" data-en="🎁 JCOTOKEN AIRDROP">
+    🎁 JCOTOKEN AIRDROP
+  </h1>
+  <p data-es="Recompensa para los primeros miembros de la comunidad"
+     data-en="Reward for early community members">
+    Recompensa para los primeros miembros de la comunidad
+  </p>
 </header>
 
 <section>
-<h2>¿Qué es el Airdrop JCOTOKEN?</h2>
-<p>
-El airdrop JCOTOKEN es una distribución gratuita de tokens destinada a
-recompensar a los primeros miembros que apoyan el crecimiento del proyecto
-y participan activamente en la comunidad.
+<h2 data-es="¿Qué es el Airdrop JCOTOKEN?"
+    data-en="What is the JCOTOKEN Airdrop?">
+¿Qué es el Airdrop JCOTOKEN?</h2>
+
+<p data-es="El airdrop JCOTOKEN es una distribución gratuita de tokens destinada a recompensar a los primeros miembros que apoyan el crecimiento del proyecto y participan activamente en la comunidad."
+   data-en="The JCOTOKEN airdrop is a free token distribution designed to reward early members who support the growth of the project and actively participate in the community.">
+El airdrop JCOTOKEN es una distribución gratuita de tokens destinada a recompensar a los primeros miembros que apoyan el crecimiento del proyecto y participan activamente en la comunidad.
 </p>
 </section>
 
 <section>
 <h2>🎁 Recompensa</h2>
-<p>
-<strong>Hasta 50.000 JCO por wallet elegible</strong><br>
-Distribución en BNB Smart Chain (BEP-20)
-</p>
-<p class="small">
-La cantidad final puede variar según el número de participantes.
-</p>
+<p><strong>Hasta 50.000 JCO por wallet elegible</strong><br>
+Distribución en BNB Smart Chain (BEP-20)</p>
+<p class="small">La cantidad final puede variar según el número de participantes.</p>
 </section>
 
 <section>
@@ -112,18 +192,9 @@ La cantidad final puede variar según el número de participantes.
 <li>4️⃣ Reclama tus tokens cuando el claim esté activo</li>
 </ul>
 
-<a class="btn" href="https://t.me/JCOoficial" target="_blank">
-📢 Telegram
-</a>
-
-<a class="btn" href="https://x.com/JCOtoken" target="_blank">
-🐦 Twitter / X
-</a>
-
-<a class="btn" href="https://reddit.com/r/jcotoken" target="_blank">
-👽 Reddit
-</a>
-
+<a class="btn" href="https://t.me/JCOoficial" target="_blank">📢 Telegram</a>
+<a class="btn" href="https://x.com/JCOtoken" target="_blank">🐦 Twitter / X</a>
+<a class="btn" href="https://reddit.com/r/jcotoken" target="_blank">👽 Reddit</a>
 <a class="btn" href="#" onclick="alert('El claim del airdrop se anunciará próximamente.');">
 🔗 Claim Airdrop (Próximamente)
 </a>
@@ -133,29 +204,22 @@ Las tareas y la verificación se realizan a través de plataformas externas como
 </p>
 </section>
 
-<section>
-<h2>🔐 Seguridad y Transparencia</h2>
-<ul>
-<li>✔️ Nunca solicitamos tu frase semilla</li>
-<li>✔️ Nunca pedimos enviar tokens</li>
-<li>✔️ El reclamo será on-chain</li>
-<li>✔️ Información pública y verificable</li>
-</ul>
-</section>
-
-<section>
-<h2>⚠️ Aviso Importante</h2>
-<p>
-JCOTOKEN es un proyecto comunitario Web3.
-El airdrop es una acción promocional y no constituye una promesa de rentabilidad
-ni una recomendación de inversión.
-</p>
-</section>
-
 <footer>
 © 2025 JCOTOKEN — Airdrop oficial<br>
 Contacto: <strong>contact@jcotoken.io</strong>
 </footer>
+
+<script>
+let lang = "ES";
+function toggleLang(){
+  lang = lang === "ES" ? "EN" : "ES";
+  document.getElementById("langLabel").innerText = lang;
+
+  document.querySelectorAll("[data-es]").forEach(el=>{
+    el.innerText = lang === "ES" ? el.dataset.es : el.dataset.en;
+  });
+}
+</script>
 
 </body>
 </html>
