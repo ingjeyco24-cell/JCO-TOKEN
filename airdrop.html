@@ -13,7 +13,6 @@ body{
   color:white;
   text-align:center;
   padding-top:80px;
-
   background:
     linear-gradient(rgba(5,8,20,0.85), rgba(5,8,20,0.85)),
     url("background.jpeg") center/cover no-repeat fixed;
@@ -30,7 +29,7 @@ body{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 25px;
+  padding: 0 30px;
   z-index: 9999;
   box-shadow: 0 4px 20px rgba(0,0,0,0.6);
   box-sizing: border-box;
@@ -59,9 +58,8 @@ body{
   padding:8px 14px;
   border-radius:20px;
   font-weight:bold;
-
   position: relative;
-  right: 40x;
+  right: 20px; /* corregido */
 }
 
 /* ===== HEADER ===== */
@@ -91,20 +89,37 @@ section{
   max-width:900px;
 }
 
-ul{
-  text-align:left;
-  max-width:650px;
-  margin:auto;
+section p{
+  color:#d1d5ff;
 }
 
-li{
+/* ===== LISTAS ALINEADAS ===== */
+section ul{
+  list-style:none;
+  padding:0;
+  margin:20px auto;
+  max-width:650px;
+}
+
+section ul li{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
   margin:12px 0;
+  text-align:left;
+}
+
+.icon{
+  width:26px;
+  text-align:center;
+  display:inline-block;
 }
 
 /* ===== BUTTONS ===== */
 .btn{
   display:inline-block;
-  margin:10px;
+  margin:35px 12px; /* más abajo */
   padding:14px 26px;
   background:#2563eb;
   color:white;
@@ -179,25 +194,25 @@ Distribución en BNB Smart Chain (BEP-20)</p>
 <section>
 <h2>📋 Reglas del Airdrop</h2>
 <ul>
-<li>✔️ 1 participación por wallet</li>
-<li>✔️ Red: BNB Smart Chain (BEP-20)</li>
-<li>✔️ Wallet compatible (MetaMask, Trust Wallet)</li>
-<li>❌ No se permiten bots ni multicuentas</li>
-<li>❌ No solicitamos claves privadas</li>
+  <li><span class="icon">✔️</span> 1 participación por wallet</li>
+  <li><span class="icon">✔️</span> Red: BNB Smart Chain (BEP-20)</li>
+  <li><span class="icon">✔️</span> Wallet compatible (MetaMask, Trust Wallet)</li>
+  <li><span class="icon">❌</span> No se permiten bots ni multicuentas</li>
+  <li><span class="icon">❌</span> No solicitamos claves privadas</li>
 </ul>
 </section>
 
 <section>
 <h2>📝 ¿Cómo participar?</h2>
 <ul>
-<li>1️⃣ Únete a nuestras comunidades oficiales</li>
-<li>2️⃣ Completa las tareas sociales del airdrop</li>
-<li>3️⃣ Espera el anuncio oficial del reclamo</li>
-<li>4️⃣ Reclama tus tokens cuando el claim esté activo</li>
+  <li><span class="icon">1️⃣</span> Únete a nuestras comunidades oficiales</li>
+  <li><span class="icon">2️⃣</span> Completa las tareas sociales del airdrop</li>
+  <li><span class="icon">3️⃣</span> Espera el anuncio oficial del reclamo</li>
+  <li><span class="icon">4️⃣</span> Reclama tus tokens cuando el claim esté activo</li>
 </ul>
 
 <a class="btn" href="https://t.me/JCOoficial" target="_blank">📢 Telegram</a>
-<a class="btn" href="https://x.com/JCOtoken" target="_blank">🐦 Twitter / X</a>
+<a class="btn" href="https://x.com/JCOtoken" target="_blank">✕ X</a>
 <a class="btn" href="https://reddit.com/r/jcotoken" target="_blank">👽 Reddit</a>
 <a class="btn" href="#" onclick="alert('El claim del airdrop se anunciará próximamente.');">
 🔗 Claim Airdrop (Próximamente)
