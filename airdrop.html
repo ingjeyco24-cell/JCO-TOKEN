@@ -5,8 +5,9 @@
 <title>JCOTOKEN Airdrop</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<script src="https://cdn.jsdelivr.net/npm/web3@1.10.0/dist/web3.min.js"></script>
+
 <style>
-/* ===== BODY ===== */
 body{
   margin:0;
   font-family:Arial, Helvetica, sans-serif;
@@ -18,7 +19,6 @@ body{
     url("background.jpeg") center/cover no-repeat fixed;
 }
 
-/* ===== TOP BAR ===== */
 .topbar{
   position: fixed;
   top: 0;
@@ -31,8 +31,6 @@ body{
   align-items: center;
   padding: 0 30px;
   z-index: 9999;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.6);
-  box-sizing: border-box;
 }
 
 .brand{
@@ -49,7 +47,6 @@ body{
 
 .brand-text{
   font-size:22px;
-  letter-spacing:1px;
 }
 
 .lang{
@@ -58,11 +55,8 @@ body{
   padding:8px 14px;
   border-radius:20px;
   font-weight:bold;
-  position: relative;
-  right: 20px; /* corregido */
 }
 
-/* ===== HEADER ===== */
 header{
   padding:40px 20px;
   max-width:900px;
@@ -71,16 +65,9 @@ header{
 
 .main-logo{
   width:180px;
-  max-width:70%;
   margin-bottom:20px;
 }
 
-h1{
-  font-size:36px;
-  margin-bottom:10px;
-}
-
-/* ===== SECTIONS ===== */
 section{
   background:rgba(255,255,255,0.06);
   margin:30px auto;
@@ -89,11 +76,6 @@ section{
   max-width:900px;
 }
 
-section p{
-  color:#d1d5ff;
-}
-
-/* ===== LISTAS ALINEADAS ===== */
 section ul{
   list-style:none;
   padding:0;
@@ -112,33 +94,30 @@ section ul li{
 
 .icon{
   width:26px;
-  text-align:center;
-  display:inline-block;
 }
 
-/* ===== BUTTONS ===== */
 .btn{
   display:inline-block;
-  margin:35px 12px; /* más abajo */
+  margin:40px 12px;
   padding:14px 26px;
   background:#2563eb;
   color:white;
-  text-decoration:none;
   border-radius:10px;
   font-weight:bold;
-  transition:0.3s;
+  cursor:pointer;
+  border:none;
 }
 
 .btn:hover{
   background:#3b82f6;
 }
 
-.small{
+.wallet{
+  margin-top:20px;
   font-size:14px;
-  color:#ccc;
+  color:#9ca3ff;
 }
 
-/* ===== FOOTER ===== */
 footer{
   margin:40px 0 20px;
   font-size:13px;
@@ -149,55 +128,25 @@ footer{
 
 <body>
 
-<!-- ===== TOP BAR ===== -->
 <div class="topbar">
   <div class="brand">
-    <img src="logo-top.png" class="brand-logo" alt="JCO">
+    <img src="logo-top.png" class="brand-logo">
     <span class="brand-text">JCOTOKEN</span>
   </div>
-
-  <div class="lang" onclick="toggleLang()">
-    🌐 <span id="langLabel">ES</span>
-  </div>
+  <div class="lang" onclick="toggleLang()">🌐 <span id="langLabel">ES</span></div>
 </div>
 
-<!-- ===== HEADER ===== -->
 <header>
-  <img src="logo.png" class="main-logo" alt="JCOTOKEN">
-  <h1 data-es="🎁 JCOTOKEN AIRDROP" data-en="🎁 JCOTOKEN AIRDROP">
-    🎁 JCOTOKEN AIRDROP
-  </h1>
-  <p data-es="Recompensa para los primeros miembros de la comunidad"
-     data-en="Reward for early community members">
-    Recompensa para los primeros miembros de la comunidad
-  </p>
+  <img src="logo.png" class="main-logo">
+  <h1>🎁 JCOTOKEN AIRDROP</h1>
+  <p>Recompensa para los primeros miembros de la comunidad</p>
 </header>
-
-<section>
-<h2 data-es="¿Qué es el Airdrop JCOTOKEN?"
-    data-en="What is the JCOTOKEN Airdrop?">
-¿Qué es el Airdrop JCOTOKEN?</h2>
-
-<p data-es="El airdrop JCOTOKEN es una distribución gratuita de tokens destinada a recompensar a los primeros miembros que apoyan el crecimiento del proyecto y participan activamente en la comunidad."
-   data-en="The JCOTOKEN airdrop is a free token distribution designed to reward early members who support the growth of the project and actively participate in the community.">
-El airdrop JCOTOKEN es una distribución gratuita de tokens destinada a recompensar a los primeros miembros que apoyan el crecimiento del proyecto y participan activamente en la comunidad.
-</p>
-</section>
-
-<section>
-<h2>🎁 Recompensa</h2>
-<p><strong>Hasta 50.000 JCO por wallet elegible</strong><br>
-Distribución en BNB Smart Chain (BEP-20)</p>
-<p class="small">La cantidad final puede variar según el número de participantes.</p>
-</section>
 
 <section>
 <h2>📋 Reglas del Airdrop</h2>
 <ul>
   <li><span class="icon">✔️</span> 1 participación por wallet</li>
-  <li><span class="icon">✔️</span> Red: BNB Smart Chain (BEP-20)</li>
-  <li><span class="icon">✔️</span> Wallet compatible (MetaMask, Trust Wallet)</li>
-  <li><span class="icon">❌</span> No se permiten bots ni multicuentas</li>
+  <li><span class="icon">✔️</span> BNB Smart Chain (BEP-20)</li>
   <li><span class="icon">❌</span> No solicitamos claves privadas</li>
 </ul>
 </section>
@@ -205,38 +154,55 @@ Distribución en BNB Smart Chain (BEP-20)</p>
 <section>
 <h2>📝 ¿Cómo participar?</h2>
 <ul>
-  <li><span class="icon">1️⃣</span> Únete a nuestras comunidades oficiales</li>
-  <li><span class="icon">2️⃣</span> Completa las tareas sociales del airdrop</li>
-  <li><span class="icon">3️⃣</span> Espera el anuncio oficial del reclamo</li>
-  <li><span class="icon">4️⃣</span> Reclama tus tokens cuando el claim esté activo</li>
+  <li><span class="icon">1️⃣</span> Conecta tu wallet</li>
+  <li><span class="icon">2️⃣</span> Síguenos en redes</li>
+  <li><span class="icon">3️⃣</span> Reclama tu airdrop</li>
 </ul>
 
 <a class="btn" href="https://t.me/JCOoficial" target="_blank">📢 Telegram</a>
-<a class="btn" href="https://x.com/JCOtoken" target="_blank">✕ X</a>
+<a class="btn" href="https://x.com/JCOtoken" target="_blank">✕ Twitter / X</a>
 <a class="btn" href="https://reddit.com/r/jcotoken" target="_blank">👽 Reddit</a>
-<a class="btn" href="#" onclick="alert('El claim del airdrop se anunciará próximamente.');">
-🔗 Claim Airdrop (Próximamente)
-</a>
 
-<p class="small">
-Las tareas y la verificación se realizan a través de plataformas externas como TaskOn.
-</p>
+<br><br>
+
+<button class="btn" onclick="connectWallet()">🔗 Connect Wallet</button>
+<button class="btn" onclick="claimAirdrop()">🎁 Claim 5000 JCO</button>
+
+<div class="wallet" id="walletAddress"></div>
 </section>
 
 <footer>
 © 2025 JCOTOKEN — Airdrop oficial<br>
-Contacto: <strong>contact@jcotoken.io</strong>
+contact@jcotoken.io
 </footer>
 
 <script>
-let lang = "ES";
-function toggleLang(){
-  lang = lang === "ES" ? "EN" : "ES";
-  document.getElementById("langLabel").innerText = lang;
+let web3;
+let account;
 
-  document.querySelectorAll("[data-es]").forEach(el=>{
-    el.innerText = lang === "ES" ? el.dataset.es : el.dataset.en;
-  });
+// CAMBIAR CUANDO DESPLIEGUES EL CONTRATO
+const AIRDROP_CONTRACT = "0xTU_CONTRATO_AIRDROP";
+const ABI = []; // ABI DEL CONTRATO
+
+async function connectWallet(){
+  if(window.ethereum){
+    web3 = new Web3(window.ethereum);
+    const accounts = await ethereum.request({ method: "eth_requestAccounts" });
+    account = accounts[0];
+    document.getElementById("walletAddress").innerText =
+      "Wallet conectada: " + account;
+  }else{
+    alert("Instala MetaMask o usa Trust Wallet");
+  }
+}
+
+async function claimAirdrop(){
+  if(!account){
+    alert("Conecta tu wallet primero");
+    return;
+  }
+  const contract = new web3.eth.Contract(ABI, AIRDROP_CONTRACT);
+  await contract.methods.claim().send({ from: account });
 }
 </script>
 
