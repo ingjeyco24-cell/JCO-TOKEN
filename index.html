@@ -32,19 +32,27 @@ body{
   z-index:1000;
   box-shadow:0 4px 20px rgba(0,0,0,0.6);
 }
-.brand{
+  .brand{
   display: flex;
   align-items: center;
   gap: 8px;
   font-weight: bold;
 }
+
 .brand-logo{
   width: 70px;
   height: 70px;
 }
+
 .brand-text{
   font-size: 22px;
   letter-spacing: 1px;
+}
+
+.brand{
+  font-size:26px;
+  font-weight:bold;
+  letter-spacing:1px;
 }
 
 .actions{
@@ -142,19 +150,249 @@ footer{
   font-size:13px;
   color:#aaa;
 }
-
-/* MOBILE */
+  /* =========================
+   MOBILE (Android / iOS)
+   ========================= */
 @media (max-width: 768px) {
+
   body {
     padding-top: 60px;
     text-align: center;
   }
+
+  /* TÍTULO JCOTOKEN + LOGO */
+  .token-title {
+    flex-direction: column;
+    gap: 10px;
+    font-size: 32px;
+  }
+
+  .token-logo {
+    width: 42px;
+    height: 42px;
+  }
+
+  /* LOGO PRINCIPAL */
+  .main-logo {
+    width: 140px;
+    max-width: 70%;
+  }
+
+  /* TEXTO CENTRAL */
+  .subtitle,
+  .about-text {
+    font-size: 15px;
+    line-height: 1.5;
+    padding: 0 16px;
+  }
+
+  /* BOTONES */
+  .btn,
+  button,
+  a.btn {
+    width: 90%;
+    max-width: 320px;
+    margin: 10px auto;
+    display: block;
+    font-size: 15px;
+  }
+
+  /* SECCIONES */
+  section {
+    padding: 30px 16px;
+  }
+
+  /* TOP BAR */
   .topbar {
     height: 60px;
   }
+
 }
 </style>
 </head>
 
 <body>
-<!-- EL RESTO DEL CÓDIGO QUEDA EXACTAMENTE IGUAL -->
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="brand">
+  <img src="logo-top.png" class="brand-logo" alt="JCO">
+  <span class="brand-text">JCOTOKEN</span>
+</div>
+  <div class="actions">
+    <div class="lang" onclick="toggleLang()">🌐 <span id="langLabel">EN</span></div>
+    <div class="menu-btn" onclick="toggleMenu()">☰</div>
+  </div>
+</div>
+
+<!-- MENU -->
+<div class="menu" id="menu">
+  <a href="#buy" data-en="Buy Token" data-es="Comprar Token">Buy Token</a>
+  <a href="airdrop.html" data-en="Airdrop" data-es="Airdrop">Airdrop</a>
+  <a href="#roadmap" data-en="Roadmap" data-es="Hoja de ruta">Roadmap</a>
+  <a href="#community" data-en="Community" data-es="Comunidad">Community</a>
+  <a href="https://bscscan.com/token/0x2b2c656C8D4B2F50f75F084dDeEC311Ce19c94F8"
+     target="_blank"
+     data-en="Verify Contract"
+     data-es="Verificar Contrato">Verify Contract</a>
+  <a href="https://t.me/JCOoficial"
+     target="_blank"
+     data-en="Telegram"
+     data-es="Telegram">Telegram</a>
+</div>
+
+<header>
+  <img src="logo.png" alt="JCOTOKEN">
+  <h1>JCOTOKEN</h1>
+
+  <p id="subtitle"
+     data-en="Community-driven token on BNB Smart Chain"
+     data-es="Token comunitario en BNB Smart Chain">
+     Community-driven token on BNB Smart Chain
+  </p>
+
+  <a class="btn" id="buy"
+     href="https://pancakeswap.finance/swap?outputCurrency=0x2b2c656C8D4B2F50f75F084dDeEC311Ce19c94F8"
+     target="_blank"
+     data-en="Buy on PancakeSwap"
+     data-es="Comprar en PancakeSwap">
+     Buy on PancakeSwap
+  </a>
+
+  <a class="btn"
+     href="airdrop.html"
+     data-en="Airdrop"
+     data-es="Airdrop">Airdrop</a>
+
+  <button class="btn"
+     onclick="addToMetaMask()"
+     data-en="Add to MetaMask"
+     data-es="Agregar a MetaMask">
+     Add to MetaMask
+  </button>
+</header>
+
+<section>
+<h2 data-en="About JCOTOKEN" data-es="Sobre JCOTOKEN">About JCOTOKEN</h2>
+<p id="about"
+   data-en="JCOTOKEN is a community-driven project focused on social aid, created to support foundations, charitable initiatives, and people in need. Its goal is to unite the community to generate real positive impact through transparent and collaborative actions. Built on BNB Smart Chain, JCOTOKEN uses blockchain technology to ensure security, transparency, and community participation. More than a token, it is a social tool designed to support real causes and strengthen community efforts."
+   data-es="JCOTOKEN es un proyecto comunitario con enfoque en la ayuda social, creado para apoyar fundaciones, iniciativas solidarias y personas en situación de necesidad. Su objetivo es unir a la comunidad para generar impacto positivo real mediante acciones transparentes y colaborativas.
+Construido sobre BNB Smart Chain, JCOTOKEN utiliza la tecnología blockchain para garantizar seguridad, transparencia y participación comunitaria. Más que un token, es una herramienta social diseñada para apoyar causas reales y fortalecer el trabajo comunitario.
+">
+   JCOTOKEN is a community-driven project focused on social aid, created to support foundations, charitable initiatives, and people in need. Its goal is to unite the community to generate real positive impact through transparent and collaborative actions. Built on BNB Smart Chain, JCOTOKEN uses blockchain technology to ensure security, transparency, and community participation. More than a token, it is a social tool designed to support real causes and strengthen community efforts.
+</p>
+</section>
+
+<section id="roadmap">
+<h2 data-en="Roadmap" data-es="Hoja de ruta">Roadmap</h2>
+<ul>
+  <li data-en="Token Launch" data-es="Lanzamiento del token">Token Launch</li>
+  <li data-en="Initial Liquidity" data-es="Liquidez inicial">Initial Liquidity</li>
+  <li data-en="Official Website" data-es="Sitio web oficial">Official Website</li>
+  <li data-en="Community Airdrops" data-es="Airdrops comunitarios">Community Airdrops</li>
+  <li data-en="Expansion & Partnerships" data-es="Expansión y alianzas">Expansion & Partnerships</li>
+</ul>
+</section>
+
+<section>
+<h2 data-en="Token Info" data-es="Información del Token">Token Info</h2>
+<ul>
+  <li data-en="Network: BNB Smart Chain" data-es="Red: BNB Smart Chain">Network: BNB Smart Chain</li>
+  <li data-en="Standard: BEP-20" data-es="Estándar: BEP-20">Standard: BEP-20</li>
+  <li data-en="Total Supply: 999,030,000 JCO" data-es="Suministro total: 999.030.000 JCO">Total Supply: 999,030,000 JCO</li>
+  <li data-en="Liquidity: Active" data-es="Liquidez: Activa">Liquidity: Active</li>
+</ul>
+
+<div class="contract">
+0x2b2c656C8D4B2F50f75F084dDeEC311Ce19c94F8
+</div>
+  <a class="btn"
+   href="https://bscscan.com/token/0x2b2c656C8D4B2F50f75F084dDeEC311Ce19c94F8"
+   target="_blank"
+   data-en="View on BscScan"
+   data-es="Ver en BscScan">
+View on BscScan
+</a>
+</section>
+
+  <h2 data-en="Live Price" data-es="Precio en vivo">Live Price</h2>
+  <p id="price" data-en="Loading price..." data-es="Cargando precio...">
+    Loading price...
+  </p>
+</section>
+
+<section id="community">
+<h2 data-en="Community" data-es="Comunidad">Community</h2>
+<p data-en="Join our official channels" data-es="Únete a nuestros canales oficiales">
+Join our official channels
+</p>
+<a class="btn" href="https://t.me/JCOoficial" target="_blank">Telegram</a>
+<a class="btn" href="https://x.com/jcotoken" target="_blank">X (Twitter)</a>
+<a class="btn" href="https://reddit.com/r/JCOTOKEN" target="_blank">Reddit</a>
+</section>
+
+<footer>
+  <p
+    data-en="© 2025 JCOTOKEN — Community Project"
+    data-es="© 2025 JCOTOKEN — Proyecto Comunitario">
+    © 2025 JCOTOKEN — Community Project
+  </p>
+
+  <p>
+    📧
+    <span data-en="Contact:" data-es="Contacto:"></span>
+    <a href="mailto:Contact@jcotoken.io" style="color:#6ea8ff;">
+      Contact@jcotoken.io
+    </a>
+  </p>
+</footer>
+
+<script>
+function toggleMenu(){
+  const menu=document.getElementById("menu");
+  menu.style.display = menu.style.display==="flex"?"none":"flex";
+}
+
+let lang="EN";
+function toggleLang(){
+  lang = lang==="EN"?"ES":"EN";
+  document.getElementById("langLabel").innerText=lang;
+
+  document.querySelectorAll("[data-en]").forEach(el=>{
+    el.innerText = lang==="EN" ? el.dataset.en : el.dataset.es;
+  });
+}
+
+async function getPrice(){
+  try{
+    const r=await fetch("https://api.dexscreener.com/latest/dex/tokens/0x2b2c656C8D4B2F50f75F084dDeEC311Ce19c94F8");
+    const d=await r.json();
+    if(d.pairs && d.pairs.length>0){
+      document.getElementById("price").innerText =
+        "1 JCO = $" + Number(d.pairs[0].priceUsd).toFixed(8) + " USD";
+    }
+  }catch{}
+}
+getPrice();
+setInterval(getPrice,15000);
+
+async function addToMetaMask(){
+  if(window.ethereum){
+    await ethereum.request({
+      method:'wallet_watchAsset',
+      params:{
+        type:'ERC20',
+        options:{
+          address:'0x2b2c656C8D4B2F50f75F084dDeEC311Ce19c94F8',
+          symbol:'JCO',
+          decimals:18,
+          image:window.location.origin+'/logo.png'
+        }
+      }
+    });
+  }
+}
+</script>
+
+</body>
+</html>
